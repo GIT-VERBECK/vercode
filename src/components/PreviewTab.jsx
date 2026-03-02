@@ -6,7 +6,7 @@ export default function PreviewTab() {
   const { data, dotsColor, bgColor, logoDataUrl } = useQrState();
 
   const options = useMemo(() => ({
-    data: data || 'https://vercode.com',
+    data: data || 'Vercode',
     dotsOptions: {
       color: dotsColor,
       type: 'square'

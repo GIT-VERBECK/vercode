@@ -8,7 +8,7 @@ export default function LogoUpload({ onUpload }) {
     const file = e.target.files[0];
     if (file) {
       if (file.type !== 'image/png' && file.type !== 'image/svg+xml') {
-        alert('Veuillez importer un fichier PNG ou SVG.');
+        alert('Veuillez importer un fichier PNG, JPG ou SVG.');
         return;
       }
 
@@ -33,12 +33,12 @@ export default function LogoUpload({ onUpload }) {
         <polyline points="17 8 12 3 7 8"></polyline>
         <line x1="12" y1="3" x2="12" y2="15"></line>
       </svg>
-      <span>Importer PNG ou SVG</span>
+      <span>Importer PNG, JPG ou SVG</span>
       <input 
         type="file" 
         ref={fileInputRef} 
         onChange={handleFileChange} 
-        accept=".png, .svg" 
+        accept=".png, .svg, .jpg" 
         style={{ display: 'none' }} 
       />
     </div>
