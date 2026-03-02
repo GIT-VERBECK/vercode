@@ -6,9 +6,9 @@ export default function LogoUpload({ onUpload }) {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-      if (file.type !== 'image/png' && file.type !== 'image/svg+xml') {
-        alert('Veuillez importer un fichier PNG, JPG ou SVG.');
+      if (file) {
+      if (!['image/png', 'image/svg+xml', 'image/jpeg'].includes(file.type)) {
+        alert('Veuillez importer un fichier PNG, JPG, JPEG ou SVG.');
         return;
       }
 
@@ -38,7 +38,7 @@ export default function LogoUpload({ onUpload }) {
         type="file" 
         ref={fileInputRef} 
         onChange={handleFileChange} 
-        accept=".png, .svg, .jpg" 
+        accept=".png, .svg, .jpg, .jpeg" 
         style={{ display: 'none' }} 
       />
     </div>

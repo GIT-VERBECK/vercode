@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const QrContext = createContext();
 
 export const QrProvider = ({ children }) => {
-  const [data, setData] = useState('https://github.com/GIT-VERBECK');
+  const [data, setData] = useState('');
   const [dotsColor, setDotsColor] = useState('#000000');
   const [bgColor, setBgColor] = useState('#ffffff');
   const [logoDataUrl, setLogoDataUrl] = useState(null);
